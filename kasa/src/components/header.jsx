@@ -1,9 +1,7 @@
-import * as React from "react";
 import { NavLink } from 'react-router-dom';
 import "../App.sass";
 
-class Header extends React.Component {
-    render() {
+export default function Header() {
         return (
             <header>
                 <div>
@@ -23,8 +21,5 @@ class Header extends React.Component {
                 </div>
             </header>
         );
-    }
 }
-
-export default Header;
 
