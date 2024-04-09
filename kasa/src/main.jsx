@@ -17,7 +17,8 @@ import {
 import "./App.sass";
 import App from "./pages/home";
 import ErrorPage from "./pages/error404";
-import Roots from "./pages/about";
+import About from "./pages/about";
+import Housing from "./pages/housingPage";
 
 const router = createBrowserRouter([
   {
@@ -30,8 +31,12 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
+    path: "/housingPage/:id",
+    element: <Housing />,
+  },
+  {
     path: "/about",
-    element: <Roots />,
+    element: <About />,
   },
   
 ]);

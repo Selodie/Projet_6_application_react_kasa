@@ -5,7 +5,7 @@ export default function Header() {
         return (
             <header>
                 <div>
-                    <img src="./assets/logoKasaDesktop.png" alt="logo de Kasa, la premier a est représenté par une maison"></img>
+                    <img src="/assets/logoKasaDesktop.png" alt="logo de Kasa, la premier a est représenté par une maison"></img>
                 </div>
                 <div className="nav">
                     <nav>
