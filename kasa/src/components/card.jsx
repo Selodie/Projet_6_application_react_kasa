@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 // import Data from "../housingRental.json"
 
 export default function Card(item) {
-        console.log(item);
+        // console.log(item);
         return(
                 <Link className="linkCard" to={`/housingPage/${item.id}`}>
                         <div className="card">

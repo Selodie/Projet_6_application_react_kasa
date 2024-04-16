@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
   
 *
-  max-width: 1440px
+  // max-width: 1440px
   font-family: Montserrat
   color: black
 
-  
+
+
+// main
+
+.main 
+   margin-top: 38px
+   margin-bottom: 38px
+   display: flex
+   flex-direction: column
+   justify-content: center
+   align-items: center
+
 // header
 
 header
@@ -14,8 +25,8 @@ header
   width: 1240px
   height: 68px
   margin-top: 45px
-  padding-right: 50px
-  padding-left: 50px
+  padding-right: 60px
+  padding-left: 90px
 
 
 ul
@@ -58,13 +69,16 @@ ul
 
 // banner
 
+.banner
+  
+
 .bannerBack
   width: 1240px
   height: 223px
   flex-shrink: 0
   border-radius: 25px
   opacity: 06
-  background-image: url("./assets/cliff.png")
+  // background-image: url("./assets/cliff.png")
   background-position: center 
   background-repeat: no-repeat
   background-size: cover
@@ -108,12 +122,77 @@ ul
   text-decoration: none
  
 
+//  collapse
+
+.collapse
+  width: 1023px
+  height: 35px
+  padding: 10px 20px 10px 15px
+  display: flex
+  justify-content: center
+  // flex-direction: columns
+  gap: 30px
+  border-radius: 5px
+  background-color: #FF6060
+  transition: 0.3s all ease
+  display: flex
+  justify-content: space-between
+
+.allCollapse
+  display: flex
+  flex-direction: column
+  margin-top: 38px
+  gap: 15px
+  justify-content: center
+  align-items: center
+
+.collapseBack
+  width: 1060px
+  background-color: #F6F6F6
+  border-radius: 5px
+  
+.titleCollapse
+  color: #fff
+  font-size: 24px
+  font-weight: 600
+  text-align: center
+  margin: 0px
+  padding: 0px
  
- 
+.animation
+  // transition: transform-duration 8s ease-in-out
 
+.arrowDown
+  cursor: pointer
+  &:active
+    transition-duration: 0.1s
+    transform: rotate(180deg)
+    
 
+.arrowUp
+  cursor: pointer
+  &:active
+    transition-duration: 0.1s
+    transform: rotate(180deg)
 
+// error page
 
+.errorContent
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.errorTilte
+  color: #ff6060
+  font-size: 228px
+
+.errorText
+  color: #ff6060
+  font-size: 36px
+
+.linkHome
+  font-size: 18px
 
 
     
