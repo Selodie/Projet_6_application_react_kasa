@@ -195,7 +195,41 @@ ul
   font-size: 18px
 
 
-    
+// slideshow
+
+.slideshow-container 
+  position: relative
+  width: 1240px
+  height: 415px
+  border-radius: 25px
+  overflow: hidden
 
 
-  
+.slide 
+  width: 100%
+  height: 100%
+  position: absolute
+  background-size: cover
+  background-position: center
+  transition: opacity 0.5s ease
+  opacity: 0
+
+
+.slide.active 
+  opacity: 1
+
+.arrowLeftSlideshow
+  position: absolute
+  z-index: 1
+  top: 50%
+  left: 10px
+  cursor: pointer
+
+.arrowRightSlideshow
+   position: absolute
+   z-index: 1
+   top: 50%
+   right: 10px
+   .fas
+      .fa-chevron-right
+        font-size: 94px
