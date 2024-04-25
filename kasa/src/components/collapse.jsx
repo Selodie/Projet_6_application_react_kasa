@@ -66,5 +66,9 @@ export default function Collapse({title, text}) {
 
 Collapse.propTypes = {
     title: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired, 
+    // on indique que text peut être une chaîne de caractère ou un tableau
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array
+    ]).isRequired,
   };

@@ -36,17 +36,17 @@ export default function About() {
             <Header/>
         </div> 
         <main className="main">
-        <div>
-        <Banner
-        src={"/assets/mountain.png"}
-        alt={"Image de falaises"}/>
-        </div>
-        <div className="allCollapse">
-          {/* on parcours le tableau et pour chaque objet -> un collapse */}
-        {collapseData.map(({ title, text }) => (
-            <Collapse key= {generateKey(title)} title = {title} text = {text} />
-          ))}
-        </div>
+          <div>
+            <Banner
+              src={"/assets/mountain.png"}
+              alt={"Image de falaises"}/>
+          </div>
+          <div className="allCollapse">
+            {/* on parcours le tableau et pour chaque objet -> un collapse */}
+            {collapseData.map(({ title, text }) => (
+                <Collapse key= {generateKey(title)} title = {title} text = {text} />
+              ))}
+          </div>
         </main>
         <div>
             <Footer/>

@@ -8,7 +8,7 @@ export default function Card(item) {
                 <Link className="linkCard" to={`/housingPage/${item.id}`}>
                         <div className="card">
                                 <img src={item.cover} alt={item.title}></img>
-                                <p>{item.title}</p>
+                                <p className="cardTitle">{item.title}</p>
                         </div> 
                </Link>   
         )

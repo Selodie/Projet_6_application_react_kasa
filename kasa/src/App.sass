@@ -5,7 +5,8 @@
   font-family: Montserrat
   color: black
 
-
+#root
+  width: 1440px
 
 // main
 
@@ -55,7 +56,9 @@ ul
   justify-content: center
   align-items: center
   gap: 20px
-  
+  // position: absolute
+  // bottom: 0
+
 .imgFooter
   padding-top: 66px
 
@@ -106,6 +109,10 @@ ul
   border-radius: 25px
   width: 1240px
   height: 829px
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(7, 1fr)
+
 
 .card
   width: 340px
@@ -120,7 +127,12 @@ ul
 
 .linkCard
   text-decoration: none
- 
+
+.cardTitle
+  position: absolute
+  padding-left: 20px
+  padding-bottom: 20px
+  color: #FFFFFF
 
 //  collapse
 
@@ -182,17 +194,23 @@ ul
   flex-direction: column
   justify-content: center
   align-items: center
+  gap: 139px
+  margin-top: 139px
 
 .errorTilte
   color: #ff6060
   font-size: 228px
+  margin: 0
 
 .errorText
   color: #ff6060
   font-size: 36px
 
-.linkHome
+.text
   font-size: 18px
+  margin: 0
+  padding: 0
+  margin-bottom: 139px
 
 
 // slideshow
@@ -203,6 +221,8 @@ ul
   height: 415px
   border-radius: 25px
   overflow: hidden
+  margin-top: 50px
+  margin-bottom: 30px
 
 
 .slide 
@@ -233,3 +253,52 @@ ul
    .fas
       .fa-chevron-right
         font-size: 94px
+
+.slideshowIndicators
+  position: absolute
+  color: #FFFFFF
+  bottom: 35px
+  z-index: 1
+  left: 50%
+
+
+// Tag
+
+.tag
+  background-color: #ff6060
+  color: #FFFFFF
+  font-size: 14px
+  font-weight: 600
+  width: 115px
+  height: 25px
+  border-radius: 10px
+  padding: 2px 40px 3px 40px
+  margin-left: 10px
+
+
+// housing page
+
+.titleHousingPage
+    color: #ff6060
+    font-size: 36px
+    font-weight: 500
+    margin: 0
+    padding-bottom: 5px
+
+.profilPicture
+  width: 64px
+  height: 64px
+  border-radius: 50px
+
+.introHousing
+  display: flex
+  flex-direction: row
+
+.collapseHousing
+  display: flex
+  flex-direction: row
+ 
+
+.collapseHousingContent
+  //  width: 582px
+  //  height: auto

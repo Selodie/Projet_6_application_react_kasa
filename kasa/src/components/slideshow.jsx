@@ -1,7 +1,6 @@
 import "../App.sass";
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-// import Data from "../housingRental.json"
 
 
 export default function Slideshow({ slides }) {
@@ -20,7 +19,10 @@ export default function Slideshow({ slides }) {
     
         return (
         <div className="slideshow-container">
-
+            {/* numérotation des images du carrousel. On début la numérotation à 1 */}
+            <div className="slideshowIndicators">
+                {currentIndex + 1} / {slides.length}
+            </div>
             <span className="arrowLeftSlideshow" onClick={goToPreviousSlide}><i className="fas fa-chevron-left" style={{color: "#FFFFFF"}}></i></span>
 
             {/* on utlise la méthode map() sur le props slides dont le tableau est définit dans la page housingPage */}
@@ -34,7 +36,6 @@ export default function Slideshow({ slides }) {
                 style={{ backgroundImage: `url(${slide})` }}
             />
             ))}
-            
             <span className="arrowRightSlideshow" onClick={goToNextSlide}><i className="fas fa-chevron-right" style={{color: "#FFFFFF"}}></i></span>
         </div>
         );
@@ -43,5 +44,4 @@ export default function Slideshow({ slides }) {
 
     Slideshow.propTypes = {
         slides: PropTypes.array.isRequired,
-        
     };

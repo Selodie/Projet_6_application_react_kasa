@@ -19,7 +19,7 @@ export default function ErrorPage() {
         {/* <p>
           <i>{error.statusText || error.message}</i>
         </p> */}
-        <Link className="linkHome" to="/">{"Retourner sur la page d'accueil"}</Link>
+        <Link className="text" to="/">{"Retourner sur la page d'accueil"}</Link>
       </div>
       <div>
             <Footer/>
