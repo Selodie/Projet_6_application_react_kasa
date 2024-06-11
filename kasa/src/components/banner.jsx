@@ -1,20 +1,25 @@
 import "../App.sass";
 import PropTypes from 'prop-types';
-// import cliff from '/assets/cliff.png'
 
-
-export default function Banner({src, alt}) {
+export default function Banner({alt, classe, text}) {
    
         return(
-            <div className="banner">
-                <img className="bannerBack" src={src} alt={alt}></img>
-                {/* <img src={cliff}></img> */}
-                {/* <p className="textBanner">Chez vous, partout et ailleurs</p> */}
-            </div>
-       ) 
+            <>
+                <div className="bannerDiv">
+                    <div className={classe} alt={alt}>
+                    </div>
+                    <div> 
+                        <div className="textBanner">{text}</div>
+                        <div className="textBannerBis">{text}</div>
+                    </div>
+                </div>
+            </>
+       )    
 }
 
+// on définit le type de données des props (propriétées) passés dans le composant
 Banner.propTypes = {
-    src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
+    classe: PropTypes.string.isRequired,
+    text: PropTypes.string,
   };

@@ -6,7 +6,7 @@ import Collapse from "../components/collapse"
 
 export default function About() {
 
-  // pour générer une clé unique et alétoire en uilisant un préfixe et un date
+  // pour générer une clé unique et alétoire en uilisant un préfixe et une date
   new Date().getTime();
     const generateKey = (pre) => {
       return `${ pre }_${ new Date().getTime() }`;
@@ -35,14 +35,14 @@ export default function About() {
         <div>
             <Header/>
         </div> 
-        <main className="main">
+        <main className="mainAbout">
           <div>
             <Banner
-              src={"/assets/mountain.png"}
-              alt={"Image de falaises"}/>
+              alt={"Image de falaises"}
+              classe={"bannerAbout"}/>
           </div>
           <div className="allCollapse">
-            {/* on parcours le tableau et pour chaque objet -> un collapse */}
+            {/* on parcours le tableau et pour chaque objet, on affiche un collapse. */}
             {collapseData.map(({ title, text }) => (
                 <Collapse key= {generateKey(title)} title = {title} text = {text} />
               ))}
@@ -55,5 +55,4 @@ export default function About() {
     );
   }
 
-  //  cf pour générer une clé unique
  

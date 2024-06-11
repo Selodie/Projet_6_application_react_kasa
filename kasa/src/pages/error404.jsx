@@ -11,14 +11,11 @@ export default function ErrorPage() {
   return (
     <div id="error-page">
       <div>
-            <Header/>
+        <Header/>
         </div>
       <div className="errorContent">
         <h1 className="errorTilte">404</h1>
         <p className="errorText">Oups! La page que vous demandez n existe pas.</p>
-        {/* <p>
-          <i>{error.statusText || error.message}</i>
-        </p> */}
         <Link className="text" to="/">{"Retourner sur la page d'accueil"}</Link>
       </div>
       <div>
