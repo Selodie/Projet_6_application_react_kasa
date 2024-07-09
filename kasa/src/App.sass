@@ -5,46 +5,114 @@
   font-family: Montserrat
   color: black
 
+ul
+  padding: 0
+  margin: 0
+
+html   
+  // width: 100%
+  // height: 100%
+  // background-color: red
+
+body 
+  font-size: 24px
+  // display: flex
+  // justify-content: center
+  // align-items: center
+  margin: 0
+  // padding: 0 100px
+  // width: 100%
+  // background-color: orange
 
 #root
   // width: 1440px
-
-// main
-.main
-  width: 1240px
-  margin-left: 100px
-
-.mainAbout
-  width: 1240px
-  // margin-top: 38px
-  margin-bottom: 38px
-  margin-left: 100px
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
+  // width: 100%
+  // background-color: pink
+
+  @media screen and (max-width: 1024px)
+    padding: 0
+
+// main
+.main
+  /*width: 1240px*/
+  /*margin-left: 100px */
+  // max-width: 1240px
+  width: 100%
+
+.mainAbout
+  // width: 1240px
+  // margin-top: 38px
+  // margin-bottom: 38px
+  // margin-left: 100px
+  // display: flex
+  // flex-direction: column
+  // justify-content: center
+  // align-items: center
+  width: 100%
 
 // header
+
+.header
+  width: 100%
+
+.logo
+  display: flex
+  justify-content: center
+  align-items: center
+
+.nav
+  display: flex
+  align-items: center
+
+  ul
+    display: flex
+
+    li
+      margin-left: 15px
 
 header
   display: flex
   justify-content: space-between
-  width: 1240px
   height: 68px
-  margin-top: 45px
-  margin-bottom: 50px
-  padding-left: 100px
+  // margin-top: 45px
+  // margin-bottom: 50px
+  // width: 100%
+  // background-color: green
+  margin: 50px 100px
+
+  @media screen and (max-width: 1024px)
+    margin: 20px
+
+  @media (width <= 576px)
+    // background: green
+    font-size: 13px
+    font-weight: 600
+    
+    img
+      width: 145px
+
+  @media (width > 576px)
+    img
+      width: 245px
+
+  // img
+    // min-width: 145px
+    // max-width: 200px
+  
 
 
-ul
+/*ul
   display: flex
   flex-direction: row
   justify-content: center
   align-content: center
-  gap: 57px
+  gap: 57px*/
 
 .liHeader
-    font-size: 24px
     list-style-type: none
 
 .navLink
@@ -56,35 +124,48 @@ ul
 // footer
 
 .footer
+  // position: fixed
+  bottom: 0
   background-color: black
-  width: 1440px
+  // width: 1440px
+  width: 100%
   height: 209px
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  gap: 10px
+  // gap: 10px
   // position: absolute
   // bottom: 0
 
 .imgFooter
-  padding-top: 80px
+  // padding-top: 80px
+  margin: 20px
 
 .pFooter
   color: white
   font-size: 24px
   font-weight: 500
-  padding-bottom: 29px
+  // padding-bottom: 29px
+  text-align: center
 
+  @media screen and (max-width: 1024px)
+    font-size: 16px
+    font-weight: 300
+    
 
 
 // banner
 
 .bannerDiv
   position: relative
+  margin: 0 100px
+
+  @media screen and (max-width: 1024px)
+    margin: 0 20px
 
 .bannerBack
-  width: 1240px
+  // width: 1240px
   height: 223px
   filter: brightness(40%)
   flex-shrink: 0
@@ -97,8 +178,13 @@ ul
   background-size: cover
   box-shadow:  0px 4px 4px #F6F6F6
 
+  @media screen and (max-width: 500px)
+    height: 130px
+    box-shadow: none
+    border-radius: 15px
+
 .bannerAbout
-  width: 1240px
+  // width: 1240px
   height: 223px
   filter: brightness(60%)
   flex-shrink: 0
@@ -108,7 +194,11 @@ ul
   background-position: center 
   background-repeat: no-repeat
   background-size: cover
-  box-shadow:  0px 4px 4px #F6F6F6
+
+  @media screen and (max-width: 500px)
+    height: 130px
+    border-radius: 15px
+
   
 .textBanner
   color: white
@@ -127,8 +217,13 @@ ul
   position: absolute
   margin: 0
   top: 48%
-  left: 48%
+  left: 50%
   transform: translate(-50%, -50%)
+
+  @media screen and (max-width: 500px)
+    font-size: 30px
+    text-align: start
+    margin-left: 10px
 
 
 .textBannerBis
@@ -142,26 +237,50 @@ ul
   position: absolute
   margin: 0
   top: 48%
-  left: 48%
+  left: 50%
   transform: translate(-50%, -50%)
-  
+
+  @media screen and (max-width: 500px)
+    font-size: 30px
+    text-align: start
+    margin-left: 10px
+
 
 // card
 
 .backCard
   background-color: #F6F6F6
   border-radius: 25px
-  width: 1240px
-  margin-top: 43px
-  margin-bottom: 50px
+  /*width: 1240px*/
+  // margin-top: 43px
+  // margin-bottom: 50px
   padding: 46px 0px 43px 0px
   display: grid
   grid-template-columns: repeat(3, 1fr)
   grid-template-rows: repeat(7, 1fr)
   row-gap: 40px
   justify-items: center
+  margin: 43px 100px 50px
 
+  @media screen and (max-width: 1400px)
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(7, 1fr)
+    row-gap: 40px
 
+  @media screen and (max-width: 1024px)
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: repeat(7, 1fr)
+    row-gap: 40px
+    min-width: 400px
+    margin: 43px 15px 50px
+    background-color: white
+
+  @media screen and (max-width: 500px)
+    min-width: auto
+    background-color: white
+    margin: 0
+    padding: 26px 0px 43px 0px
+    row-gap: 20px
 
 .card
   position: relative
@@ -175,6 +294,13 @@ ul
   height: 340px
   object-fit: cover
   border-radius: 10px
+  filter: brightness(80%)
+  &:hover
+      filter: brightness(100%)
+
+  @media screen and (max-width: 500px)
+    width: 90vw
+      
 
 .cardTitle
   position: absolute
@@ -183,39 +309,61 @@ ul
   left: 0
   bottom: 0
   color: #FFFFFF
-  font-weight: 700
+  font-weight: 500
   padding: 15px
   padding-bottom: 5px
+  font-size: 18px
+  
 
 
 //  collapse
 
+.collapseContainer
+  padding: 0px 100px
+
+  @media screen and (max-width: 1024px)
+    padding: 0px 20px
+  
 .collapse
   width: 100%
-  height: 35px
-  padding: 10px 20px 10px 15px
+  // height: 35px
+  // padding: 10px 20px 10px 20px
   display: flex
-  justify-content: center
   gap: 30px
-  border-radius: 5px
+  border-radius: 10px
   background-color: #FF6060
   transition: 0.3s all ease
-  display: flex
   justify-content: space-between
   margin-top: 30px
+  max-width: 1024px
+  align-items: center
+
+  div
+    height: 100%
+    // background-color: blue
+    padding: 10px 20px
+
+    @media screen and (max-width: 1024px)
+      padding: 3px 10px
 
 .allCollapse
-  width: 1023px
+  // width: 1023px
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  padding-bottom: 8px
+  // padding-bottom: 8px
+  width: 100%
+  padding-bottom: 20px
 
 .collapseBack
-  width: 1060px
-  background-color: #F6F6F6
+  // width: 1060px
+  // background-color: #F6F6F6
   border-radius: 5px
+
+  max-width: 1024px
+  width: 100%
+  // padding: 0px 20px
   
 .titleCollapse
   color: #fff
@@ -224,10 +372,17 @@ ul
   text-align: center
   margin: 0px
   padding: 0px
+
+  @media screen and (max-width: 1024px)
+    font-size: 16px
  
 .textCollapse
   margin: 0px
-  padding: 10px 20px 15px 20px
+  padding: 20px
+  background-color: #F6F6F6
+
+  @media screen and (max-width: 1024px)
+    font-size: 16px
 
 .animation
   // transition: transform-duration 8s ease-in-out
@@ -275,12 +430,21 @@ ul
 
 .slideshow-container 
   position: relative
-  width: 1240px
+  // width: 1240px
   height: 415px
   border-radius: 25px
   overflow: hidden
-  margin-top: 50px
-  margin-bottom: 30px
+  // margin-top: 50px
+  // margin-bottom: 30px
+  // margin: 50px 100px 30px
+  margin: 0px 100px
+
+  @media screen and (max-width: 1024px)
+    margin: 0px 15px
+  
+  @media screen and (max-width: 500px)
+    height: 350px
+    border-radius: 10px
 
 
 .slide 
@@ -304,6 +468,11 @@ ul
   cursor: pointer
   font-size: 90px
 
+  @media screen and (max-width: 1024px)
+    font-size: 40px
+    top: 40%
+    left: 10px
+
 .arrowRightSlideshow
    position: absolute
    z-index: 1
@@ -311,6 +480,12 @@ ul
    right: 20px
    cursor: pointer
    font-size: 90px
+
+   @media screen and (max-width: 1024px)
+    font-size: 40px
+    top: 40%
+    right: 10px
+   
 
 .slideshowIndicators
   position: absolute
@@ -320,6 +495,9 @@ ul
   left: 50%
   font-size: 22px
 
+  @media screen and (max-width: 500px)
+   display: none 
+
 
 // Tag
 
@@ -327,15 +505,23 @@ ul
   background-color: #ff6060
   color: #FFFFFF
   font-size: 14px
-  font-weight: 600
-  width: 115px
+  font-weight: 500
+  // width: 115px
   height: 25px
   border-radius: 10px
-  padding: 5px 40px 6px 40px
+  padding: 5px 40px 5px 40px
   margin-right: 10px
+  display: flex
+  align-items: center
+  
+  @media (width <= 576px)
+    font-size: 12px
+    padding: 2px 10px
+
 
 .tagContener
-  padding-right: 10px
+  // padding-right: 10px
+  display: flex
 
 
 // housing page
@@ -347,47 +533,126 @@ ul
     margin: 0
     padding:0px
 
+    @media screen and (max-width: 1024px)
+      font-size: 26px
+
 .profilPicture
   width: 64px
   height: 64px
   border-radius: 50px
   float: left
 
+  @media screen and (max-width: 1024px)
+    width: 42px
+    height: 42px
+
+.contentHousing
+  margin-top: 30px
+  padding: 0px 100px
+
+  @media screen and (max-width: 1024px)
+    margin-top: 20px
+    padding: 0px 15px
+
+  @media screen and (max-width: 500px)
+    margin-top: 10px
+
 .introHousing
   display: flex
   flex-direction: row
   justify-content: space-between
 
+  .rightBloc
+    display: flex
+    flex-direction: column
+
+    @media screen and (max-width: 1024px)
+      margin-top: 20px
+      flex-direction: row-reverse
+      justify-content: space-between
+      align-items: center
+
+    @media screen and (max-width: 500px)
+      margin-top: 10px
+
+  @media screen and (max-width: 1024px)
+    flex-direction: column
+
 .host
   display: flex
-  flex-direction: row
-  gap: 5px
+  // flex-direction: row
+  // gap: 5px
+  justify-content: flex-end
+  align-items: center
+
 
 .hostName
   // float: right
-  width: 70px
+  // width: 70px
+  margin: 0 15px 0 0
+  color: #FF6060
+  text-align: right
+  // width: 100px
+
+  @media screen and (max-width: 1024px)
+    font-size: 16px
 
 .housingMain
   width: 1240px
 
 .collapseHousing
-  width: 1240px
+  // width: 1240px
+  width: 100%
   display: flex
   flex-direction: row
   margin-bottom: 50px
-  gap: 142px
+  // gap: 142px
+  margin-top:30px
+  gap: 40px
+
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+
+  @media screen and (max-width: 1024px)
+    margin-top: 20px
+    // padding: 0px 15px
+  
+    grid-template-columns: repeat(1, 1fr)
+    // min-width: 400px
+    row-gap: 20px
  
 .collapseHousingContent
-   width: 530px
-   height: auto
+  // width: 530px
+  width: 100%
+  height: auto
+  display: flex
+  flex-direction: column
+
+  .collapse
+    margin: 0
+
+    div
+      display: flex
+      align-items: center
+
+  .collapseBack
+    display: flex
+    flex-grow: 1
+
+    .textCollapse
+      width: 100%
 
 #stars
   color: #ff5f54
 
 .location
-  margin: 0px 0px 20px 0px
+  margin: 5px 0px 20px 0px
   font-weight: 600
   font-size: 18px
+
+  @media screen and (max-width: 500px)
+    font-size: 14px
+    margin: 5px 0px 10px 0px
 
 .tagRating
   display: flex
@@ -396,5 +661,17 @@ ul
 
 // rating
 
+.rating 
+  margin-top: 20px
+
+  @media screen and (max-width: 1024px)
+    margin-top: 0
+
 .ratingStars
   padding-left: 10px
+
+  @media screen and (max-width: 1024px)
+    padding-left: 0
+    padding-right: 5px
+    font-size: 18px
+

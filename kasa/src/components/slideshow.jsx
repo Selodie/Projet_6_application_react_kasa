@@ -25,10 +25,10 @@ export default function Slideshow({ slides }) {
     return (
     <div className="slideshow-container">
           
-          {/* si showNavigation (le nombre d'images sup à 1) est true, on affiche ce qui suis */}
+        {/* si showNavigation (le nombre d'images sup à 1) est true, on affiche ce qui suis */}
         {showNavigation && (
             <>
-            {/* numérotation des images du carrousel. On débute la numérotation à 1  */}
+                {/* numérotation des images du carrousel. On débute la numérotation à 1  */}
                 <div className="slideshowIndicators">
                     {currentIndex + 1} / {slides.length}
                  </div>
@@ -38,7 +38,7 @@ export default function Slideshow({ slides }) {
         {/* on utlise la méthode map() sur le props slides dont le tableau est définit dans la page housingPage */}
         {slides.map((slide,index) => (
         <div
-        // la clé unique est basé sur l'index du tableau
+            // la clé unique est basé sur l'index du tableau
             key={index}
             // si l'index correspond à currentIndex, la classe active est ajoutée sur l'image affichée/séléectionnée
             className={`slide ${index === currentIndex ? 'active' : ''}`}

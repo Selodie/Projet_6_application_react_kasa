@@ -5,12 +5,12 @@ import Collapse from "../components/collapse"
 
 
 export default function About() {
-
   // pour générer une clé unique et alétoire en uilisant un préfixe et une date
   new Date().getTime();
-    const generateKey = (pre) => {
-      return `${ pre }_${ new Date().getTime() }`;
+  const generateKey = (pre) => {
+    return `${ pre }_${ new Date().getTime() }`;
   }
+
   // tableau qui contient les titres et les textes à mettre dans les collapses
   const collapseData = [
     {
@@ -30,29 +30,30 @@ export default function About() {
       text:"La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standars sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
     }
   ]
-    return (
-      <>
+
+  return (
+    <>
+      <div className="header">
+        <Header/>
+      </div> 
+      <main className="mainAbout">
         <div>
-            <Header/>
-        </div> 
-        <main className="mainAbout">
-          <div>
-            <Banner
-              alt={"Image de falaises"}
-              classe={"bannerAbout"}/>
-          </div>
+          <Banner
+            alt={"Image de falaises"}
+            classe={"bannerAbout"}/>
+        </div>
+        <div className="collapseContainer">
           <div className="allCollapse">
             {/* on parcours le tableau et pour chaque objet, on affiche un collapse. */}
             {collapseData.map(({ title, text }) => (
-                <Collapse key= {generateKey(title)} title = {title} text = {text} />
-              ))}
+              <Collapse key= {generateKey(title)} title = {title} text = {text} />
+            ))}
           </div>
-        </main>
-        <div>
-            <Footer/>
         </div>
-      </>
-    );
-  }
+      </main>
+      <Footer/>
+    </>
+  );
+}
 
  
