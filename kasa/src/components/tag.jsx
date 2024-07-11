@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 export default function Tag({ tags }) {
     return(
         <div className="tagContener">
-            {/* utilisation de la méthode map() pour parcourir les éléments du tableau tags.
-            On renvoie ensuite chaque élément dans un span. Chaque élément à pour clé unique un index*/}
+            {/* itération sur chaque tag dans le tableau tags */}
             {tags.map((tag, index) => (
-                // <span className="tag" key={index}>{tag}</span>
+                // pour chaque tag on retourne une div avec une clé unique (on utilise l'index pour la définir)
+                // et un tag
                 <div className="tag" key={index}>{tag}</div>
             ))}
             
         </div>
     );
 }
-
+// on spécifie que le composant attend un tableau tags qui est requis
 Tag.propTypes = {
     tags: PropTypes.array.isRequired,
 };

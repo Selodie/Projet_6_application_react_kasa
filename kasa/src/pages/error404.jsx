@@ -5,6 +5,7 @@ import Footer from "../components/footer"
 
 
 export default function ErrorPage() {
+  // utilisation d'un hook pour récupérer toute erreur 
   const error = useRouteError();
   console.error(error);
 
@@ -15,7 +16,8 @@ export default function ErrorPage() {
         </div>
       <div className="errorContent">
         <h1 className="errorTilte">404</h1>
-        <p className="errorText">Oups! La page que vous demandez n existe pas.</p>
+        <p className="errorText">{"Oups! La page que vous demandez n'existe pas."}</p>
+        {/* redirection vers la page d'acceuil */}
         <Link className="text" to="/">{"Retourner sur la page d'accueil"}</Link>
       </div>
       <div>

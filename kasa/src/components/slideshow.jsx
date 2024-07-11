@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function Slideshow({ slides }) {
 
-    // On met la veleur initiale à 0
+    // On met la valeur initiale à 0
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // On met à jour currentIndex pour passer à la slide suivante
@@ -14,12 +14,12 @@ export default function Slideshow({ slides }) {
     setCurrentIndex(nextIndex);
     };
 
-    // idem mais met à jour pour passer à la slide précédente
+    // On met à jour pour passer à la slide précédente
     const goToPreviousSlide = () => {
     const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
     setCurrentIndex(prevIndex);
         };
-
+    // la navigation  des slides se fait si elles sont supérieur à 1 slide
     const showNavigation = slides.length > 1;
 
     return (
@@ -30,8 +30,10 @@ export default function Slideshow({ slides }) {
             <>
                 {/* numérotation des images du carrousel. On débute la numérotation à 1  */}
                 <div className="slideshowIndicators">
+                    {/* numéroation de la slide actuelle */}
                     {currentIndex + 1} / {slides.length}
                  </div>
+                 {/* bouton pour revenir à la slide précédente */}
                 <span className="arrowLeftSlideshow" onClick={goToPreviousSlide}><i className="fa fa-chevron-left" style={{color: "#FFFFFF"}}></i></span>
             </>
           )}
@@ -40,19 +42,20 @@ export default function Slideshow({ slides }) {
         <div
             // la clé unique est basé sur l'index du tableau
             key={index}
-            // si l'index correspond à currentIndex, la classe active est ajoutée sur l'image affichée/séléectionnée
+            // si l'index correspond à currentIndex, la classe active est ajoutée sur l'image affichée/sélectionnée
             className={`slide ${index === currentIndex ? 'active' : ''}`}
             // on définit l'url de l'image sur le background image
             style={{ backgroundImage: `url(${slide})` }}
         />
         ))}
+        {/* affichage du bouton pour aller à la slide suivante si nécessaire */}
         {showNavigation && (
             <span className="arrowRightSlideshow" onClick={goToNextSlide}><i className="fa fa-chevron-right" style={{color: "#FFFFFF"}}></i></span>
         )}
     </div>
     );
 }
-
+// on spécifie que le composant attend un tableau slides comme prop et qu'il est requis
     Slideshow.propTypes = {
         slides: PropTypes.array.isRequired,
     };

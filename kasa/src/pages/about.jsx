@@ -5,8 +5,8 @@ import Collapse from "../components/collapse"
 
 
 export default function About() {
-  // pour générer une clé unique et alétoire en uilisant un préfixe et une date
-  new Date().getTime();
+  // pour générer une clé unique et aléatoire en uilisant un préfixe et une date
+  // new Date().getTime();
   const generateKey = (pre) => {
     return `${ pre }_${ new Date().getTime() }`;
   }

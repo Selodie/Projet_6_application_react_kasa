@@ -1,0 +1,1 @@
+Entrer la commande npm run dev" dans le terminal pour lancer le porjet Kasa

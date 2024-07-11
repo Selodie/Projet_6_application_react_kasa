@@ -24,6 +24,7 @@ export default function App() {
           <div className="backCard">
             {/* utilisation de la méthode map() pour afficher un card pour chaque logements */}
             {Data.map((item) => (
+              // les propriétés key, id, title et cover sont passées en tant que props au composant Card
               <Card key={item.id} id={item.id} title={item.title} cover={item.cover} />
             ))}
           </div>
