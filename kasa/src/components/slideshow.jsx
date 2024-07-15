@@ -34,7 +34,8 @@ export default function Slideshow({ slides }) {
                     {currentIndex + 1} / {slides.length}
                  </div>
                  {/* bouton pour revenir à la slide précédente */}
-                <span className="arrowLeftSlideshow" onClick={goToPreviousSlide}><i className="fa fa-chevron-left" style={{color: "#FFFFFF"}}></i></span>
+                 <span className="arrowLeftSlideshow" onClick={goToPreviousSlide}><img src="/assets/VectorLeft.png"></img></span>
+                <span className="arrowLeftSlideshowMobile" onClick={goToPreviousSlide}><img src="/assets/arrowLeftMobile.png"></img></span>
             </>
           )}
         {/* on utlise la méthode map() sur le props slides dont le tableau est définit dans la page housingPage */}
@@ -50,7 +51,11 @@ export default function Slideshow({ slides }) {
         ))}
         {/* affichage du bouton pour aller à la slide suivante si nécessaire */}
         {showNavigation && (
-            <span className="arrowRightSlideshow" onClick={goToNextSlide}><i className="fa fa-chevron-right" style={{color: "#FFFFFF"}}></i></span>
+            <div>
+             {/* <span className="arrowRightSlideshow" onClick={goToNextSlide}><img src="/assets/Vector.png"></img></span> */}
+                <img src="/assets/Vector.png" className="arrowRightSlideshow" onClick={goToNextSlide}></img>
+                <img src="/assets/arrowRightMobile.png" className="arrowRightSlideshowMobile" onClick={goToNextSlide}></img>
+            </div>
         )}
     </div>
     );
