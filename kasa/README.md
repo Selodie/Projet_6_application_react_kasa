@@ -1,1 +1,3 @@
-Entrer la commande npm run dev" dans le terminal pour lancer le porjet Kasa
+Pour lancer le projet Kasa :
+    - Se placer dans le dossier Kasa
+    - Entrer dans la commande du terminal : npm run dev

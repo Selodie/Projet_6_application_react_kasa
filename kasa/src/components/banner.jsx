@@ -12,6 +12,20 @@ export default function Banner({alt, classe, text}) {
           {/* texte de la bannière répété deux fois car superposé pour avoir le rendu de la maquette */}
           <div className="textBanner">{text}</div>
           <div className="textBannerBis">{text}</div>
+
+          
+          {/* texte pour la version mobile pour un rendu comme sur la maquette */}
+          <div className="textBanner mobile">
+            {text ? text.split(',').map((item, index) =>
+              <div className="textBannerPart" key={item}> {item}{index == 0 ? "," : ""} </div>
+            ) : ''}
+          </div>
+
+          <div className="textBannerBis mobile">
+            {text ? text.split(',').map((item, index) =>
+              <div className="textBannerPart" key={item}> {item}{index == 0 ? "," : ""} </div>
+            ) : ''}
+          </div>
         </div>
       </div>
     </>

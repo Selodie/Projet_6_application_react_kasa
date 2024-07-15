@@ -7,55 +7,29 @@
 
 ul
   padding: 0
-  margin: 0
-
-html   
-  // width: 100%
-  // height: 100%
-  // background-color: red
+  margin: 0  
 
 body 
   font-size: 24px
-  // display: flex
-  // justify-content: center
-  // align-items: center
   margin: 0
-  // padding: 0 100px
-  // width: 100%
-  // background-color: orange
 
 #root
-  // width: 1440px
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  // width: 100%
-  // background-color: pink
 
   @media screen and (max-width: 1024px)
     padding: 0
 
 // main
 .main
-  /*width: 1240px*/
-  /*margin-left: 100px */
-  // max-width: 1240px
   width: 100%
 
 .mainAbout
-  // width: 1240px
-  // margin-top: 38px
-  // margin-bottom: 38px
-  // margin-left: 100px
-  // display: flex
-  // flex-direction: column
-  // justify-content: center
-  // align-items: center
   width: 100%
 
 // header
-
 .header
   width: 100%
 
@@ -78,17 +52,12 @@ header
   display: flex
   justify-content: space-between
   height: 68px
-  // margin-top: 45px
-  // margin-bottom: 50px
-  // width: 100%
-  // background-color: green
   margin: 50px 100px
 
   @media screen and (max-width: 1024px)
     margin: 20px
 
   @media (width <= 576px)
-    // background: green
     font-size: 13px
     font-weight: 600
     
@@ -98,19 +67,6 @@ header
   @media (width > 576px)
     img
       width: 245px
-
-  // img
-    // min-width: 145px
-    // max-width: 200px
-  
-
-
-/*ul
-  display: flex
-  flex-direction: row
-  justify-content: center
-  align-content: center
-  gap: 57px*/
 
 .liHeader
     list-style-type: none
@@ -122,31 +78,23 @@ header
 
 
 // footer
-
 .footer
-  // position: fixed
   bottom: 0
   background-color: black
-  // width: 1440px
   width: 100%
   height: 209px
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  // gap: 10px
-  // position: absolute
-  // bottom: 0
 
 .imgFooter
-  // padding-top: 80px
   margin: 20px
 
 .pFooter
   color: white
   font-size: 24px
   font-weight: 500
-  // padding-bottom: 29px
   text-align: center
 
   @media screen and (max-width: 1024px)
@@ -156,7 +104,6 @@ header
 
 
 // banner
-
 .bannerDiv
   position: relative
   margin: 0 100px
@@ -165,13 +112,11 @@ header
     margin: 0 20px
 
 .bannerBack
-  // width: 1240px
   height: 223px
   filter: brightness(40%)
   flex-shrink: 0
   border-radius: 25px
   position: relative
-  // opacity: 06
   background-image: url("./assets/cliff.png")
   background-position: center 
   background-repeat: no-repeat
@@ -184,7 +129,6 @@ header
     border-radius: 15px
 
 .bannerAbout
-  // width: 1240px
   height: 223px
   filter: brightness(60%)
   flex-shrink: 0
@@ -209,10 +153,7 @@ header
   font-size: 48px
   font-weight: 700
   z-index: 1
-  // line-height: 142.6%
   text-align: center
-  // padding-top: 70px
-  // text-shadow: 0px 4px 4px #00000040
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
   position: absolute
   margin: 0
@@ -220,10 +161,17 @@ header
   left: 50%
   transform: translate(-50%, -50%)
 
+  &.mobile
+    display: none
+    
+    @media screen and (max-width: 500px)
+      display: block
+
   @media screen and (max-width: 500px)
     font-size: 30px
     text-align: start
     margin-left: 10px
+    display: none
 
 
 .textBannerBis
@@ -240,20 +188,26 @@ header
   left: 50%
   transform: translate(-50%, -50%)
 
+  &.mobile
+    display: none
+    
+    @media screen and (max-width: 500px)
+      display: block
+
   @media screen and (max-width: 500px)
     font-size: 30px
     text-align: start
     margin-left: 10px
+    display: none
+
+.textBannerPart
+  color: white
 
 
 // card
-
 .backCard
   background-color: #F6F6F6
   border-radius: 25px
-  /*width: 1240px*/
-  // margin-top: 43px
-  // margin-bottom: 50px
   padding: 46px 0px 43px 0px
   display: grid
   grid-template-columns: repeat(3, 1fr)
@@ -317,7 +271,6 @@ header
 
 
 //  collapse
-
 .collapseContainer
   padding: 0px 100px
 
@@ -326,8 +279,6 @@ header
   
 .collapse
   width: 100%
-  // height: 35px
-  // padding: 10px 20px 10px 20px
   display: flex
   gap: 30px
   border-radius: 10px
@@ -340,30 +291,23 @@ header
 
   div
     height: 100%
-    // background-color: blue
     padding: 10px 20px
 
     @media screen and (max-width: 1024px)
       padding: 3px 10px
 
 .allCollapse
-  // width: 1023px
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  // padding-bottom: 8px
   width: 100%
   padding-bottom: 20px
 
 .collapseBack
-  // width: 1060px
-  // background-color: #F6F6F6
   border-radius: 5px
-
   max-width: 1024px
   width: 100%
-  // padding: 0px 20px
   
 .titleCollapse
   color: #fff
@@ -401,42 +345,66 @@ header
     transform: rotate(180deg)
 
 // error page
+  
+#error-page
+  width: 100%
+  height: 100vh
+  display: flex
+  flex-direction: column
 
 .errorContent
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
+  flex-grow: 1
+  justify-content: space-evenly
   gap: 139px
-  margin-top: 139px
+  margin-top: 40px
+  margin-bottom: 139px
 
-.errorTilte
-  color: #ff6060
-  font-size: 228px
-  margin: 0
+  @media screen and (max-width: 500px)
+    gap: 111px
+    margin-top: 50px
+    margin-bottom: 111px
+
+.errorTitle
+  h1
+    color: #ff6060
+    font-size: 220px
+    margin: 0
+    
+    @media screen and (max-width: 500px)
+      font-size: 80px
 
 .errorText
   color: #ff6060
   font-size: 36px
+  text-align: center
+    
+  @media screen and (max-width: 500px)
+    font-size: 18px
+    padding: 0 50px
 
-.text
-  font-size: 18px
-  margin: 0
-  padding: 0
-  margin-bottom: 139px
+.errorRedirect
+  text-align: center
+
+  .text
+    font-size: 18px
+    margin: 0
+    padding: 0
+    // margin-bottom: 139px
+    
+    @media screen and (max-width: 500px)
+      font-size: 14px
 
 
 // slideshow
-
 .slideshow-container 
   position: relative
-  // width: 1240px
   height: 415px
   border-radius: 25px
   overflow: hidden
-  // margin-top: 50px
-  // margin-bottom: 30px
-  // margin: 50px 100px 30px
   margin: 0px 100px
 
   @media screen and (max-width: 1024px)
@@ -463,29 +431,54 @@ header
 .arrowLeftSlideshow
   position: absolute
   z-index: 1
-  top: 35%
-  left: 20px
+  top: 36%
+  left: 25px
   cursor: pointer
-  font-size: 90px
 
   @media screen and (max-width: 1024px)
-    font-size: 40px
     top: 40%
     left: 10px
+
+  @media screen and (max-width: 500px)
+    display: none
+
+.arrowLeftSlideshowMobile
+  position: absolute
+  z-index: 1
+  top: 36%
+  left: 27px
+  cursor: pointer
+  display: none
+
+  @media screen and (max-width: 500px)
+    top: 46%
+    left: 5px
+    display: block
 
 .arrowRightSlideshow
    position: absolute
    z-index: 1
-   top: 33%
-   right: 20px
+   top: 36%
+   right: 25px
    cursor: pointer
-   font-size: 90px
 
    @media screen and (max-width: 1024px)
-    font-size: 40px
     top: 40%
     right: 10px
+    display: none
    
+.arrowRightSlideshowMobile
+  position: absolute
+  z-index: 1
+  top: 34%
+  right: 25px
+  cursor: pointer
+  display: none
+
+  @media screen and (max-width: 500px)
+    top: 46%
+    right: 5px
+    display: block
 
 .slideshowIndicators
   position: absolute
@@ -500,13 +493,11 @@ header
 
 
 // Tag
-
 .tag
   background-color: #ff6060
   color: #FFFFFF
   font-size: 14px
   font-weight: 500
-  // width: 115px
   height: 25px
   border-radius: 10px
   padding: 5px 40px 5px 40px
@@ -520,12 +511,10 @@ header
 
 
 .tagContener
-  // padding-right: 10px
   display: flex
 
 
 // housing page
-
 .titleHousingPage
     color: #ff6060
     font-size: 36px
@@ -580,19 +569,14 @@ header
 
 .host
   display: flex
-  // flex-direction: row
-  // gap: 5px
   justify-content: flex-end
   align-items: center
 
 
 .hostName
-  // float: right
-  // width: 70px
   margin: 0 15px 0 0
   color: #FF6060
   text-align: right
-  // width: 100px
 
   @media screen and (max-width: 1024px)
     font-size: 16px
@@ -601,12 +585,10 @@ header
   width: 1240px
 
 .collapseHousing
-  // width: 1240px
   width: 100%
   display: flex
   flex-direction: row
   margin-bottom: 50px
-  // gap: 142px
   margin-top:30px
   gap: 40px
 
@@ -615,14 +597,10 @@ header
 
   @media screen and (max-width: 1024px)
     margin-top: 20px
-    // padding: 0px 15px
-  
     grid-template-columns: repeat(1, 1fr)
-    // min-width: 400px
     row-gap: 20px
  
 .collapseHousingContent
-  // width: 530px
   width: 100%
   height: auto
   display: flex
@@ -660,7 +638,6 @@ header
   justify-content: space-between
 
 // rating
-
 .rating 
   margin-top: 20px
 

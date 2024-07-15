@@ -10,19 +10,29 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div id="error-page">
-      <div>
-        <Header/>
+    <>
+      <div id="error-page">
+        <div className="header">
+          <Header/>
         </div>
-      <div className="errorContent">
-        <h1 className="errorTilte">404</h1>
-        <p className="errorText">{"Oups! La page que vous demandez n'existe pas."}</p>
-        {/* redirection vers la page d'acceuil */}
-        <Link className="text" to="/">{"Retourner sur la page d'accueil"}</Link>
+        <div className="errorContent">
+          <div className="errorTitle">
+            <h1>404</h1>
+          </div>
+          <div className="errorText">
+            {"Oups! La page que vous demandez n'existe pas."}
+          </div>
+          {/* redirection vers la page d'acceuil */}
+          <div className="errorRedirect">
+            <Link className="text" to="/">
+              {"Retourner sur la page d'accueil"}
+            </Link>
+          </div>
+        </div>
+        <div>
+          <Footer/>
+        </div>
       </div>
-      <div>
-            <Footer/>
-        </div>
-    </div>
+    </>
   );
 }
