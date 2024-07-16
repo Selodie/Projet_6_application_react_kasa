@@ -50,7 +50,7 @@ export default function Housing() {
               <h1 className="titleHousingPage">{result.title}</h1>
               {/* localisation du logement */}
               <p className="location">{result.location}</p>
-              {/* affichage de stags du logement */}
+              {/* affichage des tags du logement */}
               <Tag key={result.id} tags={result.tags}/>
             </div>
 
