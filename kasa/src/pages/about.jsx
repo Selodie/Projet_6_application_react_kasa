@@ -33,25 +33,29 @@ export default function About() {
 
   return (
     <>
-      <div className="header">
-        <Header/>
-      </div> 
-      <main className="mainAbout">
-        <div>
-          <Banner
-            alt={"Image de falaises"}
-            classe={"bannerAbout"}/>
-        </div>
-        <div className="collapseContainer">
-          <div className="allCollapse">
-            {/* on parcours le tableau et pour chaque objet, on affiche un collapse. */}
-            {collapseData.map(({ title, text }) => (
-              <Collapse key= {generateKey(title)} title = {title} text = {text} />
-            ))}
+      <div id="aboutPage">
+        <div className="header">
+          <Header/>
+        </div> 
+        <main className="mainAbout">
+          <div>
+            <Banner
+              alt={"Image de falaises"}
+              classe={"bannerAbout"}/>
           </div>
+          <div className="collapseContainer">
+            <div className="allCollapse">
+              {/* on parcours le tableau et pour chaque objet, on affiche un collapse. */}
+              {collapseData.map(({ title, text }) => (
+                <Collapse key= {generateKey(title)} title = {title} text = {text} />
+              ))}
+            </div>
+          </div>
+        </main>
+        <div>
+          <Footer/>
         </div>
-      </main>
-      <Footer/>
+      </div>
     </>
   );
 }
